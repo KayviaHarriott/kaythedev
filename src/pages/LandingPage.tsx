@@ -60,7 +60,7 @@ export const LandingPage = () => {
           <AnimatePresence mode="wait">
             <m.div
               key={selectedTab ? selectedTab.page : "empty"}
-              initial={{ y: -50, opacity: 0 }}
+              initial={{ y: 0, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: 50, opacity: 0 }}
               transition={{ duration: 1, ease: "easeInOut" }}
