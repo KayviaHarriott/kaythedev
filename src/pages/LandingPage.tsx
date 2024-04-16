@@ -9,9 +9,9 @@ import { useState } from "react";
 import { About } from "./About";
 
 const tabs = [
-  { page: "about", component: <About />, backgroundColor: "#748B75" },
-  { page: "contact", component: <Contact />, backgroundColor: "#ED6A59" },
-  { page: "interest", component: <Interests />, backgroundColor: "#F9C784" },
+  { page: "about", component: <About />, backgroundColor: "#EDB973"}, //748B75" },
+  { page: "contact", component: <Contact />, backgroundColor: "#EDB973"} ,// ED6A59" },
+  { page: "interest", component: <Interests />, backgroundColor: "#EDB973" },
 ];
 
 export const LandingPage = () => {
@@ -20,7 +20,7 @@ export const LandingPage = () => {
   return (
     <>
       <nav className="relative z-20">
-        <ul className="flex gap-6 text-center items-center justify-center">
+        <ul className="flex gap-4 text-right items-center justify-end py-4  px-4 text-[white] text-[14px]">
           {tabs.map((item) => (
             <li
               key={item.page}
@@ -43,19 +43,19 @@ export const LandingPage = () => {
           opacity: 1,
           zIndex: 1,
           background: selectedTab ? "transparent" : "white",
-        }} 
+        }}
         animate={{
           x: 0,
           opacity: 1,
           zIndex: 1,
           background: selectedTab ? "transparent" : "white",
         }}
-        exit={{ x: 50, opacity: 1, zIndex: 0, background: "white" }} 
+        exit={{ x: 50, opacity: 1, zIndex: 0, background: "white" }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
       >
         <Box
           sx={{ backgroundColor: selectedTab.backgroundColor }}
-          className="left-0 top-0 absolute w-full"
+          className="left-0 top-0 absolute w-full px-[56px]"
         >
           <AnimatePresence mode="wait">
             <m.div

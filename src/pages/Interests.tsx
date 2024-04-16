@@ -10,7 +10,7 @@ export const Interests = () => {
     // animate={{ y: "0%" }}
     // transition={{ duration: 1, ease: "easeOut" }}
     // exit={{opacity: 1}}
-      className=" w-full bg-[#F9C784]"
+      className=" w-full bg-[#EDB973]"
     >
       <Box className="flex h-screen flex-col py-[16px]">
         <Box className="flex-grow flex items-center justify-center">
