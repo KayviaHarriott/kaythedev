@@ -11,26 +11,31 @@ import "@fontsource/poppins";
 import { NavigationBar } from "./components/Navigation";
 import { Contact } from "./pages/Contact";
 import { Interests } from "./pages/Interests";
-
-export default function App() {
+import { AnimatePresence } from "framer-motion";
+interface PageProps {}
+export default function App({ pageProps }: { pageProps: PageProps }) {
   return (
     <>
       <BrowserRouter>
         <NavigationBar />
-        <Routes>
-          <Route path="/">
-            <Route index element={<LandingPage />} />
-          </Route>
-          <Route path="/contact">
-            <Route index element={<Contact />} />
-          </Route>
-          <Route path="/interests">
-            <Route index element={<Interests />} />
-          </Route>
-        </Routes>
+        <AnimatePresence initial={false} mode="wait" >
+          <Routes>
+            <Route path="/">
+              <Route index element={<LandingPage />} {...pageProps} />
+            </Route>
+            <Route path="/contact">
+              <Route index element={<Contact />} {...pageProps} />
+            </Route>
+            <Route path="/interests">
+              <Route index element={<Interests />} {...pageProps} />
+            </Route>
+          </Routes>
+        </AnimatePresence>
       </BrowserRouter>
     </>
   );
 }
 
 // ReactDom.render(<App />, document.getElementById("root"));
+
+// But he has AnimatePrescent and Component, pageProps, router but the animate precsense does
