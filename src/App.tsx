@@ -16,22 +16,24 @@ interface PageProps {}
 export default function App({ pageProps }: { pageProps: PageProps }) {
   return (
     <>
-      <BrowserRouter>
-        {/* <NavigationBar /> */}
-        <AnimatePresence initial={false} mode="wait" >
-          <Routes>
-            <Route path="/">
-              <Route index element={<LandingPage />} {...pageProps} />
-            </Route>
-            <Route path="/contact">
-              <Route index element={<Contact />} {...pageProps} />
-            </Route>
-            <Route path="/interests">
-              <Route index element={<Interests />} {...pageProps} />
-            </Route>
-          </Routes>
-        </AnimatePresence>
-      </BrowserRouter>
+     <div>
+        <BrowserRouter>
+          {/* <NavigationBar /> */}
+          <AnimatePresence initial={false} mode="wait" >
+            <Routes>
+              <Route path="/">
+                <Route index element={<LandingPage />} {...pageProps} />
+              </Route>
+              <Route path="/contact">
+                <Route index element={<Contact />} {...pageProps} />
+              </Route>
+              <Route path="/interests">
+                <Route index element={<Interests />} {...pageProps} />
+              </Route>
+            </Routes>
+          </AnimatePresence>
+        </BrowserRouter>
+     </div>
     </>
   );
 }

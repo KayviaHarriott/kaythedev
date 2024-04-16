@@ -9,9 +9,9 @@ import { useState } from "react";
 import { About } from "./About";
 
 const tabs = [
-  { page: "about", component: <About /> },
-  { page: "contact", component: <Contact /> },
-  { page: "interest", component: <Interests /> },
+  { page: "about", component: <About />, backgroundColor: "#748B75" },
+  { page: "contact", component: <Contact />, backgroundColor: "#ED6A59" },
+  { page: "interest", component: <Interests />, backgroundColor: "#F9C784" },
 ];
 
 export const LandingPage = () => {
@@ -36,33 +36,39 @@ export const LandingPage = () => {
         </ul>
       </nav>
       <m.div
-      // initial={{ y: "100%" }}
-      // animate={{ y: "0%" }}
-      // transition={{ duration: 1, ease: "easeOut" }}
-      // exit={{opacity: 1}}
-      // className="w-full h-full bg-[#]"
+        className="overflow-hidden "
+        key={selectedTab ? selectedTab.page : "empty"}
+        initial={{
+          x: -50,
+          opacity: 1,
+          zIndex: 1,
+          background: selectedTab ? "transparent" : "white",
+        }} 
+        animate={{
+          x: 0,
+          opacity: 1,
+          zIndex: 1,
+          background: selectedTab ? "transparent" : "white",
+        }}
+        exit={{ x: 50, opacity: 1, zIndex: 0, background: "white" }} 
+        transition={{ duration: 0.5, ease: "easeInOut" }}
       >
-       <Box className="left-0 top-0 absolute w-full">
+        <Box
+          sx={{ backgroundColor: selectedTab.backgroundColor }}
+          className="left-0 top-0 absolute w-full"
+        >
           <AnimatePresence mode="wait">
             <m.div
               key={selectedTab ? selectedTab.page : "empty"}
-              initial={{ y: 10, opacity: 1 }}
+              initial={{ y: -50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -10, opacity: 1 }}
-              transition={{ duration: 0.5 , ease: "easeOut"}}
+              exit={{ y: 50, opacity: 0 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
             >
-              {/* <Box className=" ">
-                <Box className="flex-grow flex items-center justify-center">
-                  <p className="text-[56px] font-bold text-[#FFFF]">kaythedev</p>
-                </Box>
-              </Box> */}
-              {/* <Contact />
-              <Interests /> */}
-  
               {selectedTab ? selectedTab.component : ""}
             </m.div>
           </AnimatePresence>
-       </Box>
+        </Box>
       </m.div>
     </>
   );

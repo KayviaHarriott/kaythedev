@@ -12,7 +12,7 @@ export const Interests = () => {
     // exit={{opacity: 1}}
       className=" w-full bg-[#F9C784]"
     >
-      <Box className="flex h-screen flex-col py-[16px]">
+      <Box className="flex h-screen flex-col py-[16px] px-[500px] ">
         <Box className="flex-grow flex items-center justify-center">
           <p className="text-[56px] font-bold text-[#FFFF]">Interests</p>
         </Box>
