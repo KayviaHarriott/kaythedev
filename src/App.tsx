@@ -17,7 +17,7 @@ export default function App({ pageProps }: { pageProps: PageProps }) {
   return (
     <>
       <BrowserRouter>
-        <NavigationBar />
+        {/* <NavigationBar /> */}
         <AnimatePresence initial={false} mode="wait" >
           <Routes>
             <Route path="/">
