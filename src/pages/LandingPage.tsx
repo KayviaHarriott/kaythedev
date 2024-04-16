@@ -1,75 +1,29 @@
-import React from "react";
 import { Box } from "@mui/material";
+import * as React from "react";
 import { NavigationBar } from "../components/Navigation";
-import { motion as m } from "framer-motion";
-import { Contact } from "./Contact";
-import { Interests } from "./Interests";
-import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
-import { About } from "./About";
-
-const tabs = [
-  { page: "about", component: <About />, backgroundColor: "#748B75" },
-  { page: "contact", component: <Contact />, backgroundColor: "#ED6A59" },
-  { page: "interest", component: <Interests />, backgroundColor: "#F9C784" },
-];
-
 export const LandingPage = () => {
-  const [selectedTab, setSelectedTab] = useState(tabs[0]);
-
   return (
     <>
-      <nav className="relative z-20">
-        <ul className="flex gap-6 text-center items-center justify-center">
-          {tabs.map((item) => (
-            <li
-              key={item.page}
-              className={item === selectedTab ? "selected" : ""}
-              onClick={() => setSelectedTab(item)}
+      <div className="">
+        {/* <NavigationBar/> */}
+        <Box className="flex flex-col items-center h-screen">
+          <div className="flex flex-col gap-2">
+            <p className="text-center">kaythedev</p>
+            <Box
+              sx={{
+                boxShadow: "2px 4px 10px 0.1px rgba(0,0,0,0.1)",
+                padding: 2,
+                borderRadius: 2,
+              }}
             >
-              {`${item.page}`}
-              {item === selectedTab ? (
-                <motion.div className="underline" layoutId="underline" />
-              ) : null}
-            </li>
-          ))}
-        </ul>
-      </nav>
-      <m.div
-        className="overflow-hidden "
-        key={selectedTab ? selectedTab.page : "empty"}
-        initial={{
-          x: -50,
-          opacity: 1,
-          zIndex: 1,
-          background: selectedTab ? "transparent" : "white",
-        }} 
-        animate={{
-          x: 0,
-          opacity: 1,
-          zIndex: 1,
-          background: selectedTab ? "transparent" : "white",
-        }}
-        exit={{ x: 50, opacity: 1, zIndex: 0, background: "white" }} 
-        transition={{ duration: 0.5, ease: "easeInOut" }}
-      >
-        <Box
-          sx={{ backgroundColor: selectedTab.backgroundColor }}
-          className="left-0 top-0 absolute w-full"
-        >
-          <AnimatePresence mode="wait">
-            <m.div
-              key={selectedTab ? selectedTab.page : "empty"}
-              initial={{ y: -50, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: 50, opacity: 0 }}
-              transition={{ duration: 1, ease: "easeInOut" }}
-            >
-              {selectedTab ? selectedTab.component : ""}
-            </m.div>
-          </AnimatePresence>
+              <p className="text-[gray] max-w-[300px] text-center text-[14px]">
+                Hi! My name is Kayvia, a 99'er born and raised in Jamaica. Nice
+                to meet you and thanks for checking out my website {`:)`}
+              </p>
+            </Box>
+          </div>
         </Box>
-      </m.div>
+      </div>
     </>
   );
 };
