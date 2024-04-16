@@ -4,13 +4,12 @@ import { NavigationBar } from "../components/Navigation";
 import { motion as m } from "framer-motion";
 export const LandingPage = () => {
   return (
-    <>
+    <m.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 0.75, ease: "easeOut"}}>
       <Box className="bg-[#748B75] h-screen w-screen flex flex-col py-[16px]">
         <Box className="flex-grow flex items-center justify-center">
           <p className="text-[56px] font-bold text-[#FFFF]">kaythedev</p>
         </Box>
-        
       </Box>
-    </>
+    </m.div>
   );
 };
