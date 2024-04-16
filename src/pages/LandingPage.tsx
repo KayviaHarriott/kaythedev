@@ -19,7 +19,7 @@ export const LandingPage = () => {
 
   return (
     <>
-      <nav>
+      <nav className="relative z-20">
         <ul className="flex gap-6 text-center items-center justify-center">
           {tabs.map((item) => (
             <li
@@ -42,25 +42,27 @@ export const LandingPage = () => {
       // exit={{opacity: 1}}
       // className="w-full h-full bg-[#]"
       >
-        <AnimatePresence mode="wait">
-          <m.div
-            key={selectedTab ? selectedTab.page : "empty"}
-            initial={{ y: 10, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -10, opacity: 0 }}
-            transition={{ duration: 0.2 }}
-          >
-            {/* <Box className=" ">
-              <Box className="flex-grow flex items-center justify-center">
-                <p className="text-[56px] font-bold text-[#FFFF]">kaythedev</p>
-              </Box>
-            </Box> */}
-            {/* <Contact />
-            <Interests /> */}
-
-            {selectedTab ? selectedTab.component : ""}
-          </m.div>
-        </AnimatePresence>
+       <Box className="left-0 top-0 absolute w-full">
+          <AnimatePresence mode="wait">
+            <m.div
+              key={selectedTab ? selectedTab.page : "empty"}
+              initial={{ y: 10, opacity: 1 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -10, opacity: 1 }}
+              transition={{ duration: 0.5 , ease: "easeOut"}}
+            >
+              {/* <Box className=" ">
+                <Box className="flex-grow flex items-center justify-center">
+                  <p className="text-[56px] font-bold text-[#FFFF]">kaythedev</p>
+                </Box>
+              </Box> */}
+              {/* <Contact />
+              <Interests /> */}
+  
+              {selectedTab ? selectedTab.component : ""}
+            </m.div>
+          </AnimatePresence>
+       </Box>
       </m.div>
     </>
   );
