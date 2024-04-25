@@ -78,8 +78,8 @@ export const LandingPage = () => {
     <>
       {/* <NavigationBar /> */}
       <div className="bg-[yellow]">
-        {list.map((item) => (
-          <div>
+        {list.map((item, index) => (
+          <div key={index}>
             <Content content={item.content} color={item.color} />
           </div>
         ))}

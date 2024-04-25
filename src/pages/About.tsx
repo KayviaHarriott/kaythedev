@@ -10,6 +10,7 @@ import {
 import { useRef } from "react";
 import { EmailRounded, Mail } from "@mui/icons-material";
 import { Instagram, GitHub } from "react-feather";
+import { BehanceOutlined } from "@ant-design/icons";
 export const About = () => {
   //   const ref = useRef(null);
 
@@ -21,6 +22,23 @@ export const About = () => {
   //   const y = useParallax(scrollYProgress, 100);
 
   const list = [{ title: "What I Know", url: "" }];
+  const socialsList = [
+    {
+      title: "Behance",
+      icon: <p className="text-[28px]"><BehanceOutlined/></p>,
+      link: "https://www.behance.net/kaythedev",
+    },
+    {
+      title: "GitHub",
+      icon: <GitHub/>,
+      link: `https://github.com/KayviaHarriott`,
+    },
+    {
+      title: "Instagram",
+      icon: <Instagram/>,
+      link: `https://instagram.com/kayviaharriott`,
+    },
+  ];
   return (
     <>
       <Box className="flex w-screen">
@@ -48,42 +66,26 @@ export const About = () => {
                 </p>
               </div>
               <div className="flex flex-col items-end gap-1 mt-[-12px]">
-                {["software engineer", "web developer"].map((items, key) => (
-                  //   <motion.div
-                  //     whileHover={{ scale: 1.05 }}
-                  //     whileTap={{ scale: 0.9 }}
-                  //   >
-                  // {" "}
+                {["software engineer", "web developer"].map((items, index) => (
                   <Box
+                  key={index}
                     sx={{ borderRadius: 1, width: "fit-content" }}
                     className="bg-[black] text-[white] text-[14px] flex justify-center items-center py-2 px-2"
                   >
                     <p>{items}</p>
                   </Box>
-                  //   </motion.div>
                 ))}
                 <div className="pt-2 flex flex-row gap-2 items-center justify-center text-center">
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.9 }}
-                  >
-                    <a href="https://github.com/KayviaHarriott" target="_blank">
-                      {" "}
-                      <GitHub />
+                  {socialsList.map((item, index) => (
+                    <a key={index} href={item.link} target="_blank">
+                      <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.9 }}
+                      >
+                        {item.icon}
+                      </motion.div>
                     </a>
-                  </motion.div>
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.9 }}
-                  >
-                    <a
-                      href="https://instagram.com/kayviaharriott"
-                      target="_blank"
-                    >
-                      {" "}
-                      <Instagram />
-                    </a>
-                  </motion.div>
+                  ))}
                 </div>
               </div>
               <p></p>
