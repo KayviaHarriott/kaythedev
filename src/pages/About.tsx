@@ -141,6 +141,7 @@ export const About = () => {
                       },
                     ].map((item, index) => (
                       <Box
+                      key={index}
                         sx={{
                           p: 2,
                           border: "1px solid rgba(0,0,0,0.1)",
