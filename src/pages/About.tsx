@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import React from "react";
 import {
   motion,
@@ -25,17 +25,21 @@ export const About = () => {
   const socialsList = [
     {
       title: "Behance",
-      icon: <p className="text-[28px]"><BehanceOutlined/></p>,
+      icon: (
+        <p className="text-[28px]">
+          <BehanceOutlined />
+        </p>
+      ),
       link: "https://www.behance.net/kaythedev",
     },
     {
       title: "GitHub",
-      icon: <GitHub/>,
+      icon: <GitHub />,
       link: `https://github.com/KayviaHarriott`,
     },
     {
       title: "Instagram",
-      icon: <Instagram/>,
+      icon: <Instagram />,
       link: `https://instagram.com/kayviaharriott`,
     },
   ];
@@ -68,7 +72,7 @@ export const About = () => {
               <div className="flex flex-col items-end gap-1 mt-[-12px]">
                 {["software engineer", "web developer"].map((items, index) => (
                   <Box
-                  key={index}
+                    key={index}
                     sx={{ borderRadius: 1, width: "fit-content" }}
                     className="bg-[black] text-[white] text-[14px] flex justify-center items-center py-2 px-2"
                   >
@@ -115,6 +119,62 @@ export const About = () => {
                       </p>
                     </motion.div>
                   </a>
+                </div>
+                <div className="justify-content sm:items-center flex flex-col pt-4">
+                  <p className="text-[14px] italic pb-2 font-bold text-[#348DE0]">
+                    New! Check out my web design and development plans for web
+                    design and developments:
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-2">
+                    {[
+                      {
+                        title: "UI/UX Design",
+                        description:
+                          "With Figma, let's get your website designs started!",
+                        url: "https://www.fiverr.com/s/ge4wwv",
+                      },
+                      {
+                        title: "Web Development",
+                        description:
+                          "Using WordPress and Elementor, let's build your dream website!",
+                        url: "https://www.fiverr.com/s/0pvVja",
+                      },
+                    ].map((item, index) => (
+                      <Box
+                        sx={{
+                          p: 2,
+                          border: "1px solid rgba(0,0,0,0.1)",
+                          borderRadius: 2,
+                          width: "fit-content",
+                          maxWidth: "200px",
+                        }}
+                        className="flex flex-col items-center text-center"
+                      >
+                        <p className="font-bold">{item.title}</p>
+                        <p className="text-[gray] pb-2 text-[14px]">
+                          {item.description}
+                        </p>
+                        <Button
+                          variant="contained"
+                          href={item.url}
+                          target="_blank"
+                          sx={{
+                            textTransform: "none",
+                            boxShadow: "none",
+                            color: "black",
+                            backgroundColor: "white",
+                            border: "1px solid rgba(0,0,0,0.1)",
+                            "&:hover": {
+                              backgroundColor: "white",
+                              boxShadow: "2px 2px 10px 1px rgba(0,0,0,0.1)"
+                            }
+                          }}
+                        >
+                          Visit
+                        </Button>
+                      </Box>
+                    ))}
+                  </div>
                 </div>
                 {/* <p>
                       Vitae varius ex faucibus in. Maecenas non consectetur justo.
