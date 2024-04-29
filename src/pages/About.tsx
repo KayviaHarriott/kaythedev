@@ -122,8 +122,7 @@ export const About = () => {
                 </div>
                 <div className="justify-content sm:items-center flex flex-col pt-4">
                   <p className="text-[14px] italic pb-2 font-bold text-[#348DE0]">
-                    New! Check out my web design and development plans for web
-                    design and developments:
+                    New! Check out my web design and development plans on Fiverr:
                   </p>
                   <div className="flex flex-col sm:flex-row gap-2">
                     {[
