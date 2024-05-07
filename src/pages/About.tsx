@@ -120,7 +120,7 @@ export const About = () => {
                     </motion.div>
                   </a>
                 </div>
-                <div className="justify-content sm:items-center flex flex-col pt-4">
+                {/* <div className="justify-content sm:items-center flex flex-col pt-4">
                   <p className="text-[14px] italic pb-2 font-bold text-[#348DE0]">
                     New! Check out my web design and development plans on Fiverr:
                   </p>
@@ -175,7 +175,7 @@ export const About = () => {
                       </Box>
                     ))}
                   </div>
-                </div>
+                </div> */}
                 {/* <p>
                       Vitae varius ex faucibus in. Maecenas non consectetur justo.
                       Suspendisse arcu enim, maximus at accumsan sit amet, cursus eget
