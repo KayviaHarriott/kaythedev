@@ -46,7 +46,7 @@ export const Contact = () => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
     })
-      .then(() => console.log("Form successfully submitted"))
+      .then(() => console.log("Oops! This form is still under construction, please message me via one of my socials."))
       .catch((error) => alert(error));
   };
   
