@@ -37,7 +37,7 @@ export const Contact = () => {
           </p>
           <div className="flex flex-col gap-2 pt-[32px]">
             {info.map((item, index) => (
-              <div key={index} className="flex gap-2 items-center">
+              <div key={index} className="flex flex-col lg:flex-row gap-2 items-center">
                 <Box
                   sx={{
                     backgroundColor: "#12688D",
@@ -48,7 +48,7 @@ export const Contact = () => {
                 >
                   <img className="h-[30px]" src={item.icon} />
                 </Box>
-                <div className="flex flex-col">
+                <div className="flex flex-col text-center lg:text-left">
                   <p className="font-bold">{item.title}</p>
                   <p>{item.subtitle}</p>
                 </div>
@@ -56,7 +56,7 @@ export const Contact = () => {
             ))}
           </div>
         </div>
-        <div className="flex justify-center items-center w-full">
+        <div className="flex justify-center items-center w-full pt-6 lg:pt-0">
           <form className="flex flex-col bg-[#12688D] p-3 rounded-lg">
             {/* <form > //action="/action_page.php"> */}
             <p className="text-white pb-2">Send me a message</p>
