@@ -10,26 +10,26 @@ import program_icon from "/assets/icons/web-design-icon.png"
 import webdesign_icon from "/assets/icons/program-icon.png"
 export const AboutMe = () => {
   const socials = [
-    { label: "LinkedIn", url: "", icon: <LinkedIn /> },
-    { label: "GitHub", url: "", icon: <GitHub /> },
-    { label: "Behance", url: "", icon: <BehanceSquareOutlined /> },
-    { label: "Instagram", url: "", icon: <Instagram /> },
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/kayharriott/", icon: <LinkedIn /> },
+    { label: "GitHub", url: "https://github.com/KayviaHarriott", icon: <GitHub /> },
+    { label: "Behance", url: "https://www.behance.net/kaythedev", icon: <BehanceSquareOutlined /> },
+    { label: "Instagram", url: "https://www.instagram.com/kayviaharriott/", icon: <Instagram /> },
   ];
   const skills = [
     {
       icon: program_icon,
       label: "UI/UX Design",
-      description: "Lorem ipsum dolor get it heurm my lim.",
+      description: "I design websites for all types.",
     },
     {
       icon: webdesign_icon,
       label: "Web Development",
-      description: "Lorem ipsum dolor get it heurm my lim.",
+      description: "I love building websites with frameworks or development systems.",
     },
     {
       icon: deal_icon,
       label: "Collaborative Opportunities",
-      description: "Lorem ipsum dolor get it heurm my lim.",
+      description: "I'm open to projects and idea consultations.",
     },
   ];
   return (
@@ -54,7 +54,7 @@ export const AboutMe = () => {
           <div className="flex gap-4 justify-center items-center">
             {socials.map((item, index) => (
               <div key={index}>
-                <a href={item.url} className="flex items-center">
+                <a href={item.url} target="_blank" className="flex gap-1 items-center">
                   {item.icon}
                   <p>{item.label}</p>
                 </a>

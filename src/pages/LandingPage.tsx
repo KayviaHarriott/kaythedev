@@ -46,7 +46,7 @@ export const LandingPage = () => {
       </div>
       {/* Projects */}
       <div>
-        <Box className={`${styling} py-[56px]`}>
+        <Box className={`${styling} pt-[56px]`}>
           {/* <Projects /> */}
         </Box>
       </div>
