@@ -1,12 +1,22 @@
+import { Box } from "@mui/material";
 import React from "react";
 
 export const NavigationBar = () => {
+  const links = [{label: "LinkedIn", url: ""}, {label: "GitHub", url: ""}, {label: "Resume", url: ""}]
   return (
-    <div className="absolute z-10 flex justify-center w-full text-center items-center py-4">
-      <div className=" flex gap-2">
-        <p>Work</p>
-        <p>Contact</p>
+   <Box className="max-w-[1800px] mx-auto">
+      <div className="flex justify-between px-4 py-3 text-[white]">
+        <div className="flex font-semibold">
+          <p>kay</p>
+          <p className="text-[#ED6A59]">the</p>
+          <p>dev</p>
+        </div>
+        <div className="flex gap-4">
+          {links.map((item, index)  => (
+            <a href={item.url} key={index}><p>{item.label}</p></a>
+          ))}
+        </div>
       </div>
-    </div>
+   </Box>
   );
 };
