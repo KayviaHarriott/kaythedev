@@ -1,6 +1,7 @@
 import { Box, Button } from "@mui/material";
 import * as React from "react";
 import profile_photo from "/assets/profile_photo.png";
+import resume_pdf from '/assets/files/KayviaHarriott_Resume_Preview.pdf';
 
 export const Introduction = () => {
   return (
@@ -26,6 +27,8 @@ export const Introduction = () => {
                 color: "#1B2845",
                 textTransform: "none",
               }}
+              href={resume_pdf}
+              target="_blank"
             >
               Resume
             </Button>

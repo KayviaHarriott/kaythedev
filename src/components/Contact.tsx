@@ -18,7 +18,7 @@ export const Contact = () => {
   ];
   return (
     <>
-      <div className="flex flex-col lg:flex-row items-center justify-center lg:items-left lg:justify-left ">
+      <div id="contact-form" className="flex flex-col lg:flex-row items-center justify-center lg:items-left lg:justify-left ">
         <div className="lg:w-1/2 max-w-[500px] flex flex-col ">
           <div className="pb-2">
             <p className="text-[#ED6A59] text-[12px] max-w-[500px] text-center lg:text-left">
@@ -30,14 +30,17 @@ export const Contact = () => {
           </div>
 
           <p className="text-[#454545] text-center lg:text-left py-3">
-            Random tech bits? Front-end development? Documentation? I love it!
-            Ever since I could remember, I’ve always had an interest towards
-            technology and it’s development. This interest has driven me into my
-            career field today striving to learn more and more.
+            Have questions or any collabs you would like to work on together? Or
+            may you have a website or project that needs redesigning? Feel free
+            to contact me on my socials, or just send a quick message in the
+            contact form.
           </p>
           <div className="flex flex-col gap-2 pt-[32px]">
             {info.map((item, index) => (
-              <div key={index} className="flex flex-col lg:flex-row gap-2 items-center">
+              <div
+                key={index}
+                className="flex flex-col lg:flex-row gap-2 items-center"
+              >
                 <Box
                   sx={{
                     backgroundColor: "#12688D",
