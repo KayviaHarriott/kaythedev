@@ -68,7 +68,7 @@ export const Contact = () => {
             method="POST"
             data-netlify="true"
             className="flex flex-col bg-[#12688D] p-3 rounded-lg"
-            action="contact"
+            // action="contact"
             netlify-honeypot="bot-field"
           >
             <input type="hidden" name="form-name" value="Contact" />
