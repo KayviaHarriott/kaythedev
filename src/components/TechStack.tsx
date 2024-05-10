@@ -42,7 +42,7 @@ export const TechStack = () => {
 
   return (
     <>
-      <div className="text-center pb-2">
+      <div className="text-center pb-5">
         <p className="text-[#ED6A59] text-[12px]">Want to know what I use?</p>
         <p className="text-[#12688D] text-[24px] font-bold">
           Tech Stack & Tools
