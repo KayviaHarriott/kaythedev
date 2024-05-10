@@ -1,9 +1,30 @@
 import { Box } from "@mui/system";
-import React from "react";
+import React, { useState } from "react";
 import time_icon from "/assets/icons/time-icon.png";
 import location_icon from "/assets/icons/location-icon.png";
 
 export const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (e: any) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => alert("Success!"))
+      .catch((error) => alert(error));
+  };
+
   const info = [
     {
       title: "Based In",
@@ -70,6 +91,7 @@ export const Contact = () => {
             className="flex flex-col bg-[#12688D] p-3 rounded-lg"
             // action="contact"
             netlify-honeypot="bot-field"
+            onSubmit={handleSubmit}
           >
             <input type="hidden" name="form-name" value="Contact" />
             <input
@@ -85,6 +107,8 @@ export const Contact = () => {
                 name="fname"
                 placeholder="Your name"
                 className="p-2 rounded-sm"
+                value={formData.name}
+                onChange={handleChange}
                 // value="contact"
               />
               <input
@@ -93,6 +117,8 @@ export const Contact = () => {
                 name="subject"
                 placeholder="Subject"
                 className="p-2 rounded-sm"
+                value={formData.subject}
+              onChange={handleChange}
                 // value="contact"
               />
               <input
@@ -101,6 +127,8 @@ export const Contact = () => {
                 name="message"
                 placeholder="Your message"
                 className="p-2 rounded-sm h-[100px] "
+                value={formData.message}
+                onChange={handleChange}
                 // value="contact"
               />
             </div>
