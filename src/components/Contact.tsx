@@ -68,6 +68,7 @@ export const Contact = () => {
             method="POST"
             className="flex flex-col bg-[#12688D] p-3 rounded-lg"
             data-netlify="true"
+            netlify
           >
             {/* <form > //action="/action_page.php"> */}
             <p className="text-white pb-2">Send me a message</p>
