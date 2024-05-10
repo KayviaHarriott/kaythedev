@@ -65,7 +65,7 @@ export const Contact = () => {
         <div className="flex justify-center items-center w-full pt-6 lg:pt-0">
           <form
             name="contact"
-            method="POST"
+            // method="POST"
             className="flex flex-col bg-[#12688D] p-3 rounded-lg"
             data-netlify="true"
           >
