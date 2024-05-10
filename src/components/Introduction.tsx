@@ -20,7 +20,7 @@ export const Introduction = () => {
     <>
       <div className="py-[56px] flex flex-col flex-col-reverse lg:flex-row justify-center items-center mx-auto gap-[32px]">
         <div className="text-white max-w-[450px]">
-          <p className="text-center sm:text-left">Hi!</p>
+          <p className="text-center lg:text-left">Hi!</p>
           <div className="text-[32px] flex gap-2 text-center items-center justify-center lg:items-start lg:justify-start">
             <p className="font-[800]">I'm </p>
             <p className="font-bold text-[#ED6A59]">Kay Harriott</p>,
