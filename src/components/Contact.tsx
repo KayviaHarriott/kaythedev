@@ -25,7 +25,7 @@ export const Contact = () => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
     })
-      .then(() => alert("Success!"))
+      .then(() => alert("Oops! An error occured, please submit again or contact me via a social."))
       .catch((error) => alert(error));
   };
 
@@ -98,6 +98,8 @@ export const Contact = () => {
             onSubmit={handleSubmit}
           >
             <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="form-name" value="name_of_my_form" />
+
             <input
               type="hidden"
               name="subject"
