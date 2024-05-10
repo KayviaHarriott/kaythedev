@@ -19,17 +19,17 @@ export const AboutMe = () => {
     {
       icon: program_icon,
       label: "UI/UX Design",
-      description: "I design websites for all types.",
+      description: "Designing websites for all use cases and platforms.",
     },
     {
       icon: webdesign_icon,
       label: "Web Development",
-      description: "I love building websites with frameworks or development systems.",
+      description: "Ofcourse the next step is building... which I do too!",
     },
     {
       icon: deal_icon,
       label: "Collaborative Opportunities",
-      description: "I'm open to projects and idea consultations.",
+      description: "Open to hearing and contributing to open projects and ideas.",
     },
   ];
   return (

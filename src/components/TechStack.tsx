@@ -5,11 +5,18 @@ import html5_icon from "/assets/icons/language-and-frameworks/html-icon.png";
 import css_icon from "/assets/icons/language-and-frameworks/css-icon.png";
 import javascript_icon from "/assets/icons/language-and-frameworks/javascript-icon.png";
 import typescript_icon from "/assets/icons/language-and-frameworks/typescript-icon.png";
-import postgres_sql_icon from "/assets/icons/database/postgresql-icon.webp"
-import mysql_icon from "/assets/icons/database/my-sql-icon.png"
-import mariadb_icon from "/assets/icons/database/mariadb-icon.png"
-import figma_icon from "/assets/icons/software-tools/figma-icon.png"
-
+import postgres_sql_icon from "/assets/icons/database/postgresql-icon.webp";
+import mysql_icon from "/assets/icons/database/my-sql-icon.png";
+import mariadb_icon from "/assets/icons/database/mariadb-icon.png";
+import figma_icon from "/assets/icons/software-tools/figma-icon.png";
+import python_icon from "/assets/icons/language-and-frameworks/python-icon.webp";
+import java_icon from "/assets/icons/language-and-frameworks/java-icon.png";
+import framermotion_icon from "/assets/icons/language-and-frameworks/framermotion-icon.png";
+import webflow_icon from "/assets/icons/software-tools/webflow-icon.png";
+import docker_icon from "/assets/icons/software-tools/docker-icon.png";
+import wordpress_icon from "/assets/icons/software-tools/wordpress-icon.png";
+import elementor_icon from "/assets/icons/software-tools/elementor-icon.png";
+import cypress_icon from "/assets/icons/software-tools/cypress-icon.png";
 
 export const TechStack = () => {
   const techStack = [
@@ -30,12 +37,23 @@ export const TechStack = () => {
         { label: "CSS", icon: css_icon },
         { label: "JavaScript", icon: javascript_icon },
         { label: "TypeScript", icon: typescript_icon },
+        { label: "Python", icon: python_icon },
+        { label: "Java", icon: java_icon },
+        { label: "Framer Motion", icon: framermotion_icon },
       ],
       divColor: "#E8F8FF",
     },
     {
       label: "Software & Tools",
-      list: [{ label: "Figma", icon: figma_icon }],
+      list: [
+        { label: "Figma", icon: figma_icon },
+        { label: "Webflow", icon: webflow_icon },
+        { label: "Wordpress", icon: wordpress_icon },
+        { label: "Elementor", icon: elementor_icon },
+        { label: "Cypress", icon: cypress_icon },
+        { label: "Docker", icon: docker_icon },
+
+      ],
       divColor: "#E1F6FF",
     },
   ];
