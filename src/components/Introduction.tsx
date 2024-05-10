@@ -4,6 +4,15 @@ import profile_photo from "/assets/profile_photo.png";
 import resume_pdf from '/assets/files/KayviaHarriott_Resume_Preview.pdf';
 
 export const Introduction = () => {
+
+  const scrollToContact = () => {
+    const contactForm = document.getElementById("contact-form");
+    if (contactForm) {
+      contactForm.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  
   return (
     <>
       <div className="py-[56px] flex flex-col flex-col-reverse lg:flex-row justify-center items-center mx-auto gap-[32px]">
@@ -26,6 +35,7 @@ export const Introduction = () => {
                 backgroundColor: "white",
                 color: "#1B2845",
                 textTransform: "none",
+                fontWeight: "bold"
               }}
               href={resume_pdf}
               target="_blank"
@@ -38,7 +48,9 @@ export const Introduction = () => {
                 borderColor: "#ED6A59",
                 color: "#ED6A59",
                 textTransform: "none",
+                fontWeight: "bold"
               }}
+              onClick={() => scrollToContact()}
             >
               Contact Me
             </Button>
