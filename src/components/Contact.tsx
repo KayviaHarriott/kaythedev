@@ -18,17 +18,38 @@ export const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmitj = (e: any) => {
     e.preventDefault();
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
+      // "form-name": "contact",
+      
     })
-      .then(() => alert("Oops! An error occured, please submit again or contact me via a social."))
+      .then(() =>
+        alert(
+          "Oops! An error occured, please submit again or contact me via a social."
+        )
+      )
       .catch((error) => alert(error));
   };
 
+  const handleSubmit = (e:any) => {
+    e.preventDefault();
+  
+    const myForm = e.target;
+    const formDataSubmit = new FormData(myForm);
+    
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => console.log("Form successfully submitted"))
+      .catch((error) => alert(error));
+  };
+  
   const info = [
     {
       title: "Based In",
@@ -90,15 +111,13 @@ export const Contact = () => {
         <div className="flex justify-center items-center w-full pt-6 lg:pt-0">
           <form
             name="contact"
-            method="POST"
+            method="post"
             data-netlify="true"
+            data-netlify-honeypot="bot-field"
             className="flex flex-col bg-[#12688D] p-3 rounded-lg"
-            // action="contact"
-            netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
           >
-            <input type="hidden" name="form-name" value="contact" />
-            <input type="hidden" name="form-name" value="name_of_my_form" />
+            <input type="hidden" name="contact" value="contact" />
 
             <input
               type="hidden"
@@ -144,6 +163,7 @@ export const Contact = () => {
               className="p-2 bg-[#FF9D90] text-[white]"
             />
           </form>
+
         </div>
       </div>
     </>

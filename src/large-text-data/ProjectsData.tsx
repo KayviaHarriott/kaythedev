@@ -91,7 +91,7 @@ export const projects = [
                       "Completed project in a timely manner to satisfy client",
                       "Led and guided a team on Wordpress with Elementor processes",
                     ].map((item, index) => (
-                      <li className="flex gap-1 items-center text-[14px]">
+                      <li className="flex gap-1 text-[14px]">
                         <CheckMark color={"#12688D"} />
                         {item}
                       </li>
