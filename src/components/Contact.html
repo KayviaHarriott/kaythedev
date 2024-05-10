@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+    <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            className="flex flex-col bg-[#12688D] p-3 rounded-lg"
+            netlify-honeypot="bot-field"
+            netlify
+          >
+            <input type="hidden" name="form-name" value="Contact" />
+            <input
+              type="hidden"
+              name="subject"
+              value="Sales inquiry from mysitename.netlify.app"
+            />
+            <p className="text-white pb-2">Send me a message</p>
+            <div className="flex flex-col gap-2 pb-4">
+              <input
+                type="text"
+                id="fname"
+                name="fname"
+                placeholder="Your name"
+                className="p-2 rounded-sm"
+              />
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Subject"
+                className="p-2 rounded-sm"
+           
+              />
+              <input
+                type="text"
+                id="message"
+                name="message"
+                placeholder="Your message"
+                className="p-2 rounded-sm h-[100px] "
+              />
+            </div>
+          </form>
+
+</body>
+</html>
+
+

@@ -64,27 +64,21 @@ export const Contact = () => {
         </div>
         <div className="flex justify-center items-center w-full pt-6 lg:pt-0">
           <form
-            name="Contact"
+            name="contact"
             method="POST"
             data-netlify="true"
             className="flex flex-col bg-[#12688D] p-3 rounded-lg"
+            action="contact"
+            netlify-honeypot="bot-field"
           >
-             <input type="hidden" name="form-name" value="Contact" />
+            <input type="hidden" name="form-name" value="Contact" />
             <input
               type="hidden"
               name="subject"
               value="Sales inquiry from mysitename.netlify.app"
             />
-
-            {/* <form
-            name="contact"
-            className="flex flex-col bg-[#12688D] p-3 rounded-lg"
-            data-netlify="true"
-          > */}
-            {/* <form > //action="/action_page.php"> */}
             <p className="text-white pb-2">Send me a message</p>
             <div className="flex flex-col gap-2 pb-4">
-             
               <input
                 type="text"
                 id="fname"
