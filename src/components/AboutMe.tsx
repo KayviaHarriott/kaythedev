@@ -51,7 +51,7 @@ export const AboutMe = () => {
               my career field today striving to learn more and more.
             </p>
           </div>
-          <div className="flex gap-4 justify-center items-center">
+          <div className="flex flex-wrap px-2 gap-4 justify-center items-center">
             {socials.map((item, index) => (
               <div key={index}>
                 <a href={item.url} target="_blank" className="flex gap-1 items-center">
