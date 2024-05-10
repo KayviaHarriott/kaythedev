@@ -18,7 +18,10 @@ export const Contact = () => {
   ];
   return (
     <>
-      <div id="contact-form" className="flex flex-col lg:flex-row items-center justify-center lg:items-left lg:justify-left ">
+      <div
+        id="contact-form"
+        className="flex flex-col lg:flex-row items-center justify-center lg:items-left lg:justify-left "
+      >
         <div className="lg:w-1/2 max-w-[500px] flex flex-col ">
           <div className="pb-2">
             <p className="text-[#ED6A59] text-[12px] max-w-[500px] text-center lg:text-left">
@@ -60,7 +63,11 @@ export const Contact = () => {
           </div>
         </div>
         <div className="flex justify-center items-center w-full pt-6 lg:pt-0">
-          <form name="contact" className="flex flex-col bg-[#12688D] p-3 rounded-lg" netlify>
+          <form
+            name="contact"
+            className="flex flex-col bg-[#12688D] p-3 rounded-lg"
+            netlify
+          >
             {/* <form > //action="/action_page.php"> */}
             <p className="text-white pb-2">Send me a message</p>
             <div className="flex flex-col gap-2 pb-4">
