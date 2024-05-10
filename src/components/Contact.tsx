@@ -66,7 +66,7 @@ export const Contact = () => {
           <form
             name="contact"
             className="flex flex-col bg-[#12688D] p-3 rounded-lg"
-            netlify
+            data-netlify="true"
           >
             {/* <form > //action="/action_page.php"> */}
             <p className="text-white pb-2">Send me a message</p>
@@ -80,8 +80,8 @@ export const Contact = () => {
               />
               <input
                 type="text"
-                id="lname"
-                name="lname"
+                id="subject"
+                name="subject"
                 placeholder="Subject"
                 className="p-2 rounded-sm"
               />
