@@ -34,25 +34,25 @@ export const LandingPage = () => {
       </div>
       {/* About */}
       <div className="">
-        <Box className={`${styling} py-[32px]`}>
+        <Box className={`${styling} py-[56px]`}>
           <AboutMe />
         </Box>
       </div>
       {/* Tech Stack & Tools */}
       <div>
-        <Box className={`${styling} py-[32px]`}>
+        <Box className={`${styling} py-[56px]`}>
           <TechStack />
         </Box>
       </div>
       {/* Projects */}
       <div>
-        <Box className={`${styling} py-[32px]`}>
+        <Box className={`${styling} py-[56px]`}>
           <Projects />
         </Box>
       </div>
       {/* Contact */}
       <div className="bg-[#E9F4FF]">
-        <Box className={`${styling} py-[32px]`}>
+        <Box className={`${styling} py-[56px]`}>
           <Contact />
         </Box>
       </div>

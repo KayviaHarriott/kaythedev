@@ -28,7 +28,7 @@ export const AboutMe = () => {
   ];
   return (
     <>
-      <div className="flex flex-col lg:flex-row justify-center items-center lg:justify-start lg:items-start gap-[32px]">
+      <div className="flex flex-col lg:flex-row justify-center items-center lg:justify-start lg:gap-[32px]">
         <div className="">
           <div className="flex flex-col justify-center items-center lg:justify-start lg:items-start">
             <p className="text-[#ED6A59] text-[12px] max-w-[500px] text-center lg:text-left">
@@ -57,7 +57,7 @@ export const AboutMe = () => {
           </div>
         </div>
         <div className="flex justify-center items-center pt-[50px]">
-         <div className="flex flex-col lg:flex-row gap-4 ">
+         <div className="flex flex-col lg:flex-row gap-4 flex-wrap justify-center">
             {skills.map((item, index) => (
               <Box
                 key={index}
@@ -65,7 +65,7 @@ export const AboutMe = () => {
                   boxShadow: "5px 5px 15px 1px rgba(0,0,0,0.2)",
                   p: 2,
                   borderRadius: 1,
-                  maxWidth: "300px"
+                  maxWidth: "250px"
                 }}
                 className="flex flex-col justify-center items-center"
               >
