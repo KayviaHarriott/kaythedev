@@ -1,12 +1,25 @@
 import React from "react";
 import react_icon from "/assets/icons/language-and-frameworks/react-icon.png";
-import nodejs_icon from "/assets/icons/language-and-frameworks/nodejs-icon.png";
+import html5_icon from "/assets/icons/language-and-frameworks/html-icon.png";
+import css_icon from "/assets/icons/language-and-frameworks/css-icon.png";
+import javascript_icon from "/assets/icons/language-and-frameworks/javascript-icon.png";
+import typescript_icon from "/assets/icons/language-and-frameworks/typescript-icon.png";
+import postgre_sql_icon from "/assets/icons/database/postgresql-icon.webp";
+import mysql_icon from "/assets/icons/database/my-sql-icon.png";
+import mariadb_icon from "/assets/icons/database/mariadb-icon.png";
 import figma_icon from "/assets/icons/software-tools/figma-icon.png";
-import postgresql_icon from "/assets/icons/database/postgresql-icon.webp";
-import digitalocean_icon from "/assets/icons/software-tools/digitalocean-icon.png";
+import python_icon from "/assets/icons/language-and-frameworks/python-icon.webp";
+import java_icon from "/assets/icons/language-and-frameworks/java-icon.png";
+import framermotion_icon from "/assets/icons/language-and-frameworks/framermotion-icon.png";
+import webflow_icon from "/assets/icons/software-tools/webflow-icon.png";
+import docker_icon from "/assets/icons/software-tools/docker-icon.png";
+import wordpress_icon from "/assets/icons/software-tools/wordpress-icon.png";
+import elementor_icon from "/assets/icons/software-tools/elementor-icon.png";
+import cypress_icon from "/assets/icons/software-tools/cypress-icon.png";
 import git_icon from "/assets/icons/software-tools/git-icon.png";
 import tailwind_icon from "/assets/icons/language-and-frameworks/tailwind-icon.png";
-import typescript_iconfrom from "/assets/icons/language-and-frameworks/typescript-icon.png";
+import digitalocean_icon from "/assets/icons/software-tools/digitalocean-icon.png";
+import nodejs_icon from "/assets/icons/language-and-frameworks/nodejs-icon.png";
 
 export const CustomCarousel = () => {
   const list = [
@@ -24,7 +37,7 @@ export const CustomCarousel = () => {
     },
     {
       label: "PostgreSQL",
-      image: postgresql_icon,
+      image: postgre_sql_icon,
     },
     {
       label: "Digital Ocean",
@@ -40,7 +53,58 @@ export const CustomCarousel = () => {
     },
     {
       label: "TypeScript",
-      image: typescript_iconfrom,
+      image: typescript_icon,
+    },
+
+    {
+      label: "HITML5",
+      image: html5_icon,
+    },
+
+    {
+      label: "MySQL",
+      image: mysql_icon,
+    },
+    {
+      label: "Python",
+      image: python_icon,
+    },
+    {
+      label: "Java",
+      image: java_icon,
+    },
+    {
+      label: "CSS",
+      image: css_icon,
+    },
+
+    {
+      label: "Framer Motion",
+      image: framermotion_icon,
+    },
+    {
+      label: "WebFlow",
+      image: webflow_icon,
+    },
+    {
+      label: "Docker",
+      image: docker_icon,
+    },
+    {
+      label: "Wordpress",
+      image: wordpress_icon,
+    },
+    {
+      label: "Elementor",
+      image: elementor_icon,
+    },
+    {
+      label: "JavaScript",
+      image: javascript_icon,
+    },
+    {
+      label: "Cypress",
+      image: cypress_icon,
     },
   ];
   return (
