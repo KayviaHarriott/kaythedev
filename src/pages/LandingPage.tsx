@@ -8,6 +8,7 @@ import { AboutMe } from "../components/AboutMe";
 import { TechStack } from "../components/TechStack";
 import { Projects } from "../components/Projects";
 import { Contact } from "../components/Contact";
+import { CustomCarousel } from "../components/CustomCarousel";
 
 export const LandingPage = () => {
   useEffect(() => {
@@ -28,7 +29,7 @@ export const LandingPage = () => {
       {/* Carousel */}
       <div className="bg-[#E9F4FF] ">
         <Box className={`${styling}`}>
-          <p>Carousel</p>
+          <CustomCarousel/>
         </Box>
       </div>
       {/* About */}
