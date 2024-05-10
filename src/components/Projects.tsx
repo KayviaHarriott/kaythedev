@@ -1,35 +1,10 @@
 import { Box, Button } from "@mui/material";
 import React from "react";
+import { CustomTabs } from "./CustomTabs";
+import { projects } from "../large-text-data/ProjectsData";
 
 export const Projects = () => {
-  const projects = [
-    {
-      label: "Jamaica Sargassum Early Advisory System (JSEAS)",
-      description: "Lorem ipsum dolor",
-      image: "",
-    },
-    {
-      label: "Central Machine Diagnostics",
-      description: "Lorem ipsum dolor",
-      image: "",
-    },
-    {
-      label: "Climate Change Caribbean",
-      description: "Lorem ipsum dolor",
-      image: "",
-    },
-    {
-      label: "Healthcare Jamaica",
-      description: "Lorem ipsum dolor",
-      image: "",
-    },
-    {
-      label: "Cleverr School Teachers",
-      description: "Lorem ipsum dolor",
-      image: "",
-    },
-  ];
-
+  
   return (
     <>
       <div className="pb-2">
@@ -38,10 +13,16 @@ export const Projects = () => {
           Projects I've Worked On
         </p>
       </div>
-     <div className="flex gap-2 h-[100%] max-w-[1200px] overflow-x-auto">
-        {projects.map((item, index) => (
+      <CustomTabs content={projects} />
+      {/* <div className="flex gap-2 h-[100%] max-w-[1200px] overflow-x-auto"> */}
+      {/* {projects.map((item, index) => (
           <Box
-            sx={{ border: "1px solid #F3F3F3", borderRadius: 1, p: 1, height: "100%"}}
+            sx={{
+              border: "1px solid #F3F3F3",
+              borderRadius: 1,
+              p: 1,
+              height: "100%",
+            }}
             key={index}
             className=""
           >
@@ -67,8 +48,8 @@ export const Projects = () => {
               View Project
             </Button>
           </Box>
-        ))}
-     </div>
+        ))} */}
+      {/* </div> */}
     </>
   );
 };
