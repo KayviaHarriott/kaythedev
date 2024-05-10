@@ -99,6 +99,7 @@ export const Contact = () => {
           <form
             name="contact"
             method="post"
+            action=""
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             className="flex flex-col bg-[#12688D] p-3 rounded-lg"
