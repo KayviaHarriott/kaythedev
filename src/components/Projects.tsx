@@ -8,48 +8,12 @@ export const Projects = () => {
   return (
     <>
       <div className="pb-2">
-        <p className="text-[#ED6A59] text-[12px] w-[500px]">Want to see</p>
-        <p className="text-[#12688D] text-[24px] font-bold w-[500px]">
+        <p className="text-[#ED6A59] text-[12px] max-w-[500px]">Want to see</p>
+        <p className="text-[#12688D] text-[24px] font-bold max-w-[500px]">
           Projects I've Worked On
         </p>
       </div>
       <CustomTabs content={projects} />
-      {/* <div className="flex gap-2 h-[100%] max-w-[1200px] overflow-x-auto"> */}
-      {/* {projects.map((item, index) => (
-          <Box
-            sx={{
-              border: "1px solid #F3F3F3",
-              borderRadius: 1,
-              p: 1,
-              height: "100%",
-            }}
-            key={index}
-            className=""
-          >
-            <Box
-              sx={{
-                height: "100px",
-                width: "300px",
-                backgroundColor: "gray",
-                borderRadius: 1,
-              }}
-            ></Box>
-            <p className="font-semibold pt-2"> {item.label}</p>
-            <p className="text-[14px] pb-2">{item.description}</p>
-            <Button
-              variant="contained"
-              sx={{
-                boxShadow: "none",
-                backgroundColor: "#1B2845",
-                textTransform: "none",
-                width: "100%",
-              }}
-            >
-              View Project
-            </Button>
-          </Box>
-        ))} */}
-      {/* </div> */}
     </>
   );
 };
