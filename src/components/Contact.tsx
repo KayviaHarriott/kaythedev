@@ -66,7 +66,6 @@ export const Contact = () => {
           <form
             name="contact"
             method="POST"
-            action="/thanks"
             className="flex flex-col bg-[#12688D] p-3 rounded-lg"
             data-netlify="true"
           >
@@ -79,7 +78,7 @@ export const Contact = () => {
                 name="fname"
                 placeholder="Your name"
                 className="p-2 rounded-sm"
-                value="contact"
+                // value="contact"
               />
               <input
                 type="text"
@@ -87,7 +86,7 @@ export const Contact = () => {
                 name="subject"
                 placeholder="Subject"
                 className="p-2 rounded-sm"
-                value="contact"
+                // value="contact"
               />
               <input
                 type="text"
@@ -95,7 +94,7 @@ export const Contact = () => {
                 name="message"
                 placeholder="Your message"
                 className="p-2 rounded-sm h-[100px] "
-                value="contact"
+                // value="contact"
               />
             </div>
             <input
