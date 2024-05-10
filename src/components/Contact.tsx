@@ -10,14 +10,13 @@ export const Contact = () => {
     message: "",
   });
 
-  const handleChange = (e:any) => {
+  const handleChange = (e: any) => {
     const { name, value } = e.target;
     setFormData((prevFormData) => ({
       ...prevFormData,
       [name]: value,
     }));
   };
-  
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -98,7 +97,7 @@ export const Contact = () => {
             netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
           >
-            <input type="hidden" name="form-name" value="Contact" />
+            <input type="hidden" name="form-name" value="contact" />
             <input
               type="hidden"
               name="subject"
@@ -123,7 +122,7 @@ export const Contact = () => {
                 placeholder="Subject"
                 className="p-2 rounded-sm"
                 value={formData.subject}
-              onChange={handleChange}
+                onChange={handleChange}
                 // value="contact"
               />
               <input
