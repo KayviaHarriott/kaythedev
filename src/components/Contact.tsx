@@ -21,15 +21,15 @@ export const Contact = () => {
       <div className="flex flex-col lg:flex-row items-center justify-center lg:items-left lg:justify-left ">
         <div className="lg:w-1/2 max-w-[500px] flex flex-col ">
           <div className="pb-2">
-            <p className="text-[#ED6A59] text-[12px] w-[500px] text-center lg:text-left">
+            <p className="text-[#ED6A59] text-[12px] max-w-[500px] text-center lg:text-left">
               Want to contact me?
             </p>
-            <p className="text-[#12688D] text-[24px] font-bold w-[500px] text-center lg:text-left ">
+            <p className="text-[#12688D] text-[24px] font-bold max-w-[500px] text-center lg:text-left ">
               Let's get in touch!
             </p>
           </div>
 
-          <p className="text-[#454545] text-center lg:text-left">
+          <p className="text-[#454545] text-center lg:text-left py-3">
             Random tech bits? Front-end development? Documentation? I love it!
             Ever since I could remember, I’ve always had an interest towards
             technology and it’s development. This interest has driven me into my
