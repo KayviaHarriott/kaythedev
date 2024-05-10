@@ -1,8 +1,12 @@
-import * as React from 'react';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
+import * as React from "react";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+
+interface CustomTabsProps {
+  content: { label: string; content: React.ReactNode }[];
+}
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -33,11 +37,11 @@ function CustomTabPanel(props: TabPanelProps) {
 function a11yProps(index: number) {
   return {
     id: `simple-tab-${index}`,
-    'aria-controls': `simple-tabpanel-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
   };
 }
 
-export const CustomTabs = () => {
+export const CustomTabs: React.FC<CustomTabsProps> = ({ content }) => {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -45,23 +49,48 @@ export const CustomTabs = () => {
   };
 
   return (
-    <Box sx={{ width: '100%' }}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab label="Item One" {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
+    <Box sx={{ width: "100%" }}>
+      <Box sx={{  }}>
+        <Tabs
+        
+          value={value}
+          onChange={handleChange}
+          aria-label="basic tabs example"
+          variant="scrollable"
+          scrollButtons
+          allowScrollButtonsMobile
+          sx={{borderBottom: "0px"}}
+        >
+          {content.map((item, index) => (
+            <Tab
+              key={index}
+              label={item.label}
+              {...a11yProps(index)}
+              sx={{
+                "&.MuiTabs-indicator": { display: "none" },
+                textTransform: "none",
+                "&.Mui-selected": {
+                    backgroundColor: "#1976d2",
+                  color: "white", // Color of active tab
+                  border: "none",
+                  borderRadius: "100px"
+                },
+                "&:hover": {
+                //   color: "#ED6A59", // Color of tab on hover
+                },
+              }}
+            />
+          ))}
         </Tabs>
       </Box>
-      <CustomTabPanel value={value} index={0}>
-        Item One
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={1}>
-        Item Two
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={2}>
-        Item Three
-      </CustomTabPanel>
+      {content.map((item, index) => (
+        <CustomTabPanel key={index} index={index} value={value}>
+         <Box sx={{backgroundColor: "#E1F6FF", padding: 2, borderRadius: 2}}>
+             {item.content}
+            </Box>
+        
+        </CustomTabPanel>
+      ))}
     </Box>
   );
-}
+};
