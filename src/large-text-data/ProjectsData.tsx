@@ -10,8 +10,6 @@ const CMD_ViewProjectLink = "https://centralmachinediagnostic.com";
 const CMD_ViewDesignLink =
   "https://www.behance.net/gallery/186770535/Central-Machine-Diagnostics-Web-Design-and-Development";
 export const projects = [
-  // { label: "What I'm Working On Now", content: <div>Content 1</div> },
-
   {
     label: "Central Machine Diagnostics",
     content: (
@@ -167,11 +165,11 @@ export const projects = [
       </div>
     ),
   },
-  { label: "Cleverr School Teacher", content: <div>Content 3</div> },
-  { label: "Health Care Jamaica", content: <div>Content 3</div> },
+  { label: "Clever School Teacher", content: <div><p className="text-center">Coming Soon!</p></div> },
+  { label: "Health Care Jamaica", content: <div><p className="text-center">Coming Soon!</p></div>  },
   {
     label: "Jamaica Sargassum Early Advisory System",
-    content: <div>Content 3</div>,
+    content:<div><p className="text-center">Coming Soon!</p></div> ,
   },
-  { label: "Caribbean Knowledge Platform", content: <div>Content 4</div> },
+  { label: "Caribbean Knowledge Platform", content:<div><p className="text-center">Coming Soon!</p></div>  },
 ];
