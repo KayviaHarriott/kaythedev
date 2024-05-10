@@ -10,9 +10,14 @@ export const Contact = () => {
     message: "",
   });
 
-  const handleChange = (e: any) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (e:any) => {
+    const { name, value } = e.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
   };
+  
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -104,7 +109,7 @@ export const Contact = () => {
               <input
                 type="text"
                 id="fname"
-                name="fname"
+                name="name"
                 placeholder="Your name"
                 className="p-2 rounded-sm"
                 value={formData.name}
