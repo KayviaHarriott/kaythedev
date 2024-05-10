@@ -18,36 +18,23 @@ export const Contact = () => {
     }));
   };
 
-  const handleSubmitj = (e: any) => {
-    e.preventDefault();
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-      // "form-name": "contact",
-      
-    })
-      .then(() =>
-        alert(
-          "Oops! An error occured, please submit again or contact me via a social."
-        )
-      )
-      .catch((error) => alert(error));
-  };
 
   const handleSubmit = (e:any) => {
     e.preventDefault();
   
-    const myForm = e.target;
-    const formDataSubmit = new FormData(myForm);
+    // const myForm = e.target;
+    // const formDataSubmit = new FormData(myForm);
     
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => alert("Oops! This form is still under construction, please message me via one of my socials."))
-      .catch((error) => alert(error));
+    // fetch("/", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    //   body: new URLSearchParams(formData).toString(),
+    // })
+    //   .then(() => alert("Oops! This form is still under construction, please message me via one of my socials."))
+    //   .catch((error) => alert(error));
+    //   // 
+      const form = e.target;
+  form.submit();
   };
   
   const info = [
