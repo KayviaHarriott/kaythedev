@@ -2,8 +2,9 @@ import { Box } from "@mui/system";
 import React, { useState } from "react";
 import time_icon from "/assets/icons/time-icon.png";
 import location_icon from "/assets/icons/location-icon.png";
-
+import { useNavigate } from "react-router-dom";
 export const Contact = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     subject: "",
@@ -18,25 +19,26 @@ export const Contact = () => {
     }));
   };
 
+  const handleSubmit = (event: any) => {
+    event.preventDefault();
 
-  const handleSubmit = (e:any) => {
-    e.preventDefault();
-  
-    // const myForm = e.target;
-    // const formDataSubmit = new FormData(myForm);
-    
-    // fetch("/", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    //   body: new URLSearchParams(formData).toString(),
-    // })
-    //   .then(() => alert("Oops! This form is still under construction, please message me via one of my socials."))
-    //   .catch((error) => alert(error));
-    //   // 
-      const form = e.target;
-  form.submit();
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body:  formData.toString(),
+    })
+      .then(() => {
+        alert(
+          "Oops! The form submission is currently under construction, please message me via one of my socials or come back later."
+        );
+        navigate("");
+      })
+      .catch((error) => alert(error));
   };
-  
+
   const info = [
     {
       title: "Based In",
@@ -151,7 +153,6 @@ export const Contact = () => {
               className="p-2 bg-[#FF9D90] text-[white]"
             />
           </form>
-
         </div>
       </div>
     </>
