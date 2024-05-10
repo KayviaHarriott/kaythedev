@@ -1,5 +1,6 @@
 import { Box, Button } from "@mui/material";
 import React from "react";
+import { CustomTabs } from "./CustomTabs";
 
 export const Projects = () => {
   const projects = [
@@ -38,7 +39,9 @@ export const Projects = () => {
           Projects I've Worked On
         </p>
       </div>
+      <CustomTabs />
      <div className="flex gap-2 h-[100%] max-w-[1200px] overflow-x-auto">
+      
         {projects.map((item, index) => (
           <Box
             sx={{ border: "1px solid #F3F3F3", borderRadius: 1, p: 1, height: "100%"}}
