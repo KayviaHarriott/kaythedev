@@ -69,7 +69,7 @@ export const Contact = () => {
 
           <p className="text-[#454545] text-center lg:text-left py-3">
             Have questions or any collabs you would like to work on together? Or
-            may you have a website or project that needs redesigning? Feel free
+            maybe you have a website or project that needs redesigning? Feel free
             to contact me on my socials, or just send a quick message in the
             contact form.
           </p>
