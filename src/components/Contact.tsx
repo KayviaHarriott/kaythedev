@@ -1,42 +1,47 @@
 import { Box } from "@mui/system";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import time_icon from "/assets/icons/time-icon.png";
 import location_icon from "/assets/icons/location-icon.png";
-import { useNavigate } from "react-router-dom";
+import emailjs from "@emailjs/browser";
+
 export const Contact = () => {
-  const navigate = useNavigate();
-  const [formData, setFormData] = useState({
-    name: "",
-    subject: "",
-    message: "",
-  });
+  const form = useRef<HTMLFormElement>(null);
 
-  const handleChange = (e: any) => {
-    const { name, value } = e.target;
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      [name]: value,
-    }));
-  };
+  const sendEmail = (e: React.FormEvent) => {
+    const service_key = import.meta.env.VITE_EMAILJS_SERVICE_KEY;
+    const template_id = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const public_key = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 
-  const handleSubmit = (event: any) => {
-    event.preventDefault();
+    e.preventDefault();
 
-    const myForm = event.target;
-    const formData = new FormData(myForm);
+    if (!form.current) {
+      console.error("Form ref is not available");
+      return;
+    }
 
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body:  formData.toString(),
-    })
-      .then(() => {
-        alert(
-          "Oops! The form submission is currently under construction, please message me via one of my socials or come back later."
-        );
-        navigate("");
-      })
-      .catch((error) => alert(error));
+    emailjs
+      .sendForm(
+        service_key,
+        template_id,
+        form.current,
+        {
+          publicKey: public_key,
+        }
+      )
+      .then(
+        () => {
+          alert(
+            "Thanks! I'm recieved your message and will be replying via email."
+          );
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          alert(
+            "Oops! Something went wrong, please reload the page and try again."
+          );
+          console.log("FAILED...", error.text);
+        }
+      );
   };
 
   const info = [
@@ -69,9 +74,9 @@ export const Contact = () => {
 
           <p className="text-[#454545] text-center lg:text-left py-3">
             Have questions or any collabs you would like to work on together? Or
-            maybe you have a website or project that needs redesigning? Feel free
-            to contact me on my socials, or just send a quick message in the
-            contact form.
+            maybe you have a website or project that needs redesigning? Feel
+            free to contact me on my socials, or just send a quick message in
+            the contact form.
           </p>
           <div className="flex flex-col gap-2 pt-[32px]">
             {info.map((item, index) => (
@@ -99,52 +104,39 @@ export const Contact = () => {
         </div>
         <div className="flex justify-center items-center w-full pt-6 lg:pt-0">
           <form
-            name="contact"
-            method="post"
-            action=""
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
+            ref={form}
+            onSubmit={sendEmail}
             className="flex flex-col bg-[#12688D] p-3 rounded-lg"
-            onSubmit={handleSubmit}
           >
-            <input type="hidden" name="contact" value="contact" />
-
-            <input
-              type="hidden"
-              name="subject"
-              value="Sales inquiry from mysitename.netlify.app"
-            />
             <p className="text-white pb-2">Send me a message</p>
             <div className="flex flex-col gap-2 pb-4">
               <input
                 type="text"
-                id="fname"
-                name="name"
+                name="from_name"
                 placeholder="Your name"
                 className="p-2 rounded-sm"
-                value={formData.name}
-                onChange={handleChange}
-                // value="contact"
+                required
               />
               <input
                 type="text"
-                id="subject"
+                name="from_email"
+                placeholder="Email"
+                className="p-2 rounded-sm"
+                required
+              />
+              <input
+                type="text"
                 name="subject"
                 placeholder="Subject"
                 className="p-2 rounded-sm"
-                value={formData.subject}
-                onChange={handleChange}
-                // value="contact"
+                required
               />
               <input
                 type="text"
-                id="message"
                 name="message"
                 placeholder="Your message"
-                className="p-2 rounded-sm h-[100px] "
-                value={formData.message}
-                onChange={handleChange}
-                // value="contact"
+                className="p-2 rounded-sm h-[100px]"
+                required
               />
             </div>
             <input

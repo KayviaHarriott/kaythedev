@@ -16,11 +16,10 @@ export const LandingPage = () => {
   }, []);
 
   const styling = "max-w-[1200px] mx-auto px-[32px]";
-  const serviceKey = import.meta.env.VITE_SERVICE_KEY;
+  
   
   return (
     <>
-    {console.log("HERE", serviceKey)}
       {/* Introduction */}
       <div className="bg-[#1B2845]">
         <NavigationBar />
