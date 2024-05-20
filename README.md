@@ -1,6 +1,6 @@
 # KayTheDev 👾
 
-## Getting Started
+## Getting Started 🏃‍♀️💨
 
 Follow these instructions to set up and run the project on your local machine.
 
@@ -18,11 +18,11 @@ Follow these instructions to set up and run the project on your local machine.
    npm run dev
    ```
 
-## Project Overview
+## Project Overview 📖
 
 Welcome to my personal website! I thought one of the best ways to showcase my coding skills was to create my own personal website using React, TypeScript, and some libraries. Feel free to browse through and make sure to check out the live website: [kaythedev.com](https://kaythedev.com).
 
-## Folder Structure
+## Folder Structure 🗂️
 ```
 project-root
 │
@@ -38,11 +38,11 @@ project-root
 └── ...
 ```
 
-## Live Website/Project
+## Live Website/Project 🔎
 
 [KayTheDev.com](https://kaythedev.com)
 
-## Infinite Horizontal Scroll Carousel
+#### Infinite Horizontal Scroll Carousel 
 
 For creating an infinite horizontal scroll carousel using Tailwind CSS, refer to the following tutorial:
 
