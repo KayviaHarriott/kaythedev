@@ -10,7 +10,7 @@ export const Contact = () => {
   const sendEmail = (e: React.FormEvent) => {
     const service_key = import.meta.env.VITE_EMAILJS_SERVICE_KEY;
     const template_id = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-    const public_key = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    const public_key = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
     e.preventDefault();
 
@@ -20,20 +20,16 @@ export const Contact = () => {
     }
 
     emailjs
-      .sendForm(
-        service_key,
-        template_id,
-        form.current,
-        {
-          publicKey: public_key,
-        }
-      )
+      .sendForm(service_key, template_id, form.current, {
+        publicKey: public_key,
+      })
       .then(
         () => {
           alert(
             "Thanks! I'm recieved your message and will be replying via email."
           );
           console.log("SUCCESS!");
+          form.current?.reset(); 
         },
         (error) => {
           alert(
@@ -131,8 +127,7 @@ export const Contact = () => {
                 className="p-2 rounded-sm"
                 required
               />
-              <input
-                type="text"
+              <textarea
                 name="message"
                 placeholder="Your message"
                 className="p-2 rounded-sm h-[100px]"
