@@ -58,6 +58,9 @@ export const CustomTabs: React.FC<CustomTabsProps> = ({ content }) => {
           scrollButtons
           allowScrollButtonsMobile
           sx={{ borderBottom: "0px" }}
+          TabIndicatorProps={{
+            style: { display: 'none' }
+          }}
         >
           {content.map((item, index) => (
             <Tab
@@ -65,8 +68,9 @@ export const CustomTabs: React.FC<CustomTabsProps> = ({ content }) => {
               label={item.label}
               {...a11yProps(index)}
               sx={{
-                "&.MuiTabs-indicator": { display: "none" },
                 textTransform: "none",
+                borderBottom: "none",
+                "&.MuiTabs-indicator": { display: "none" },
                 "&.Mui-selected": {
                   backgroundColor: "#1976d2",
                   color: "white", // Color of active tab

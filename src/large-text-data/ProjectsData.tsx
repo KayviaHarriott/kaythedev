@@ -143,6 +143,7 @@ export const projects = [
               textTransform: "none",
               width: "100%",
               boxShadow: "none",
+              textAlign: "center"
             }}
             href={CMD_ViewProjectLink}
             target="_blank"
@@ -155,6 +156,7 @@ export const projects = [
               textTransform: "none",
               width: "100%",
               boxShadow: "none",
+              textAlign: "center"
             }}
             href={CMD_ViewDesignLink}
             target="_blank"
