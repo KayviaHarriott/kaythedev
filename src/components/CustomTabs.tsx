@@ -1,7 +1,6 @@
 import * as React from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
 interface CustomTabsProps {
@@ -27,7 +26,7 @@ function CustomTabPanel(props: TabPanelProps) {
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
+          <>{children}</>
         </Box>
       )}
     </div>
@@ -50,16 +49,15 @@ export const CustomTabs: React.FC<CustomTabsProps> = ({ content }) => {
 
   return (
     <Box sx={{ width: "100%" }}>
-      <Box sx={{  }}>
+      <Box sx={{}}>
         <Tabs
-        
           value={value}
           onChange={handleChange}
           aria-label="basic tabs example"
           variant="scrollable"
           scrollButtons
           allowScrollButtonsMobile
-          sx={{borderBottom: "0px"}}
+          sx={{ borderBottom: "0px" }}
         >
           {content.map((item, index) => (
             <Tab
@@ -70,13 +68,13 @@ export const CustomTabs: React.FC<CustomTabsProps> = ({ content }) => {
                 "&.MuiTabs-indicator": { display: "none" },
                 textTransform: "none",
                 "&.Mui-selected": {
-                    backgroundColor: "#1976d2",
+                  backgroundColor: "#1976d2",
                   color: "white", // Color of active tab
                   border: "none",
-                  borderRadius: "100px"
+                  borderRadius: "100px",
                 },
                 "&:hover": {
-                //   color: "#ED6A59", // Color of tab on hover
+                  //   color: "#ED6A59", // Color of tab on hover
                 },
               }}
             />
@@ -85,10 +83,9 @@ export const CustomTabs: React.FC<CustomTabsProps> = ({ content }) => {
       </Box>
       {content.map((item, index) => (
         <CustomTabPanel key={index} index={index} value={value}>
-         <Box sx={{backgroundColor: "#E1F6FF", padding: 2, borderRadius: 2}}>
-             {item.content}
-            </Box>
-        
+          <Box sx={{ backgroundColor: "#E1F6FF", padding: 2, borderRadius: 2 }}>
+            {item.content}
+          </Box>
         </CustomTabPanel>
       ))}
     </Box>
