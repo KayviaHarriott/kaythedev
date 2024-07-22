@@ -11,6 +11,9 @@ import { Contact } from "../components/Contact";
 import { CustomCarousel } from "../components/CustomCarousel";
 import { Helmet } from "react-helmet";
 // import { CardCarousel } from "../components/CardCarousel";
+// import CardCarousel
+// import {CardCarousel} from "card-carousel-reactjs";
+import { CardCarousel } from 'card-carousel-reactjs';
 
 export const LandingPage = () => {
   useEffect(() => {
@@ -61,8 +64,8 @@ export const LandingPage = () => {
       <div className="h-screen">
         <Box className="flex justify-center items-center h-full">
          <div>
-            
-              <CardCarousel />
+            <p>ll</p>
+              {/* <CardCarousel /> */}
               {/* <Introduction/> */}
      
          </div>

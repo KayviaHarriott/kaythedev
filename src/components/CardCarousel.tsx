@@ -6,7 +6,7 @@ import CircleIcon from "@mui/icons-material/Circle";
 
 interface CardCarouselProps {}
 
-export const CardCarousel: React.FC<CardCarouselProps> = ({}) => {
+export const Deprecated: React.FC<CardCarouselProps> = ({}) => {
   const [cardValue, setCardValue] = useState(0);
 
   const handleDownButton = () => {
