@@ -25,12 +25,21 @@ export const Introduction = () => {
             <p className="font-[800]">I'm </p>
             <p className="font-bold text-[#ED6A59]">Kay Harriott</p>,
           </div>
-          <p className="text-[#DFDFDF] pt-2 pb-4 text-center lg:text-left">
-            Born and raised in Jamaica, I’m a software engineer and developer
-            with over 5 years of experience. Driven to providing the best I can,
-            I’ll work with you to create and develop the best tech solutions for
-            your problems.
-          </p>
+          <Box
+            sx={{
+              "::selection": {
+                color: "red", // Change this to your desired text color
+                backgroundColor: "blue", // Change this to your desired background color
+              },
+            }}
+          >
+            <p className="text-[#DFDFDF] pt-2 pb-4 text-center lg:text-left">
+              Born and raised in Jamaica, I’m a software engineer and developer
+              with over 5 years of experience. Driven to providing the best I
+              can, I’ll work with you to create and develop the best tech
+              solutions for your problems.
+            </p>
+          </Box>
           <div className="flex gap-3 justify-center lg:justify-start">
             <Button
               variant="contained"
@@ -39,10 +48,10 @@ export const Introduction = () => {
                 color: "#1B2845",
                 textTransform: "none",
                 fontWeight: "bold",
-                "&&:hover":{
+                "&&:hover": {
                   backgroundColor: "white",
-                  boxShadow: "none"
-                }
+                  boxShadow: "none",
+                },
               }}
               href={resume_pdf}
               target="_blank"
@@ -56,10 +65,10 @@ export const Introduction = () => {
                 color: "#ED6A59",
                 textTransform: "none",
                 fontWeight: "bold",
-                "&&:hover":{
+                "&&:hover": {
                   boxShadow: "none",
-                  border: "1px solid #ED6A59"
-                }
+                  border: "1px solid #ED6A59",
+                },
               }}
               onClick={() => scrollToContact()}
             >
@@ -82,7 +91,6 @@ export const Introduction = () => {
         <div className="flex justify-center items-center">
           <Box sx={{}} className="flex justify-center items-center">
             <img className="h-[200px] lg:h-[300px]" src={profile_photo} />
-            
           </Box>
         </div>
       </div>
