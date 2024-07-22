@@ -25,6 +25,7 @@
     "@mui/material": "^5.15.14",
     "@mui/x-date-pickers": "^7.1.0",
     "@svgr/rollup": "^8.1.0",
+    "card-carousel-reactjs": "^1.0.0",
     "dayjs": "^1.11.10",
     "dotenv": "^16.4.5",
     "feather-icons": "^4.29.1",
