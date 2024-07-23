@@ -10,7 +10,7 @@ import { Projects } from "../components/Projects";
 import { Contact } from "../components/Contact";
 import { CustomCarousel } from "../components/CustomCarousel";
 import { Helmet } from "react-helmet";
-
+import {CardCarousel} from "card-carousel-reactjs"
 export const LandingPage = () => {
   useEffect(() => {
     document.title = "ktd | Kayvia Harriott";
@@ -57,6 +57,7 @@ export const LandingPage = () => {
           `}
         </script>
       </Helmet>
+      <CardCarousel items={[]}/>
       {/* Introduction */}
       <div className="bg-[#1B2845]">
         <NavigationBar />
