@@ -26,7 +26,7 @@ export const About = () => {
       <Box className="flex w-screen">
         <Box className="flex h-screen w-full justify-center items-center">
           <Box className="flex px-[32px] gap-4">
-            <Box className="sm:w-1/3 max-w-[300px] flex flex-col items-end text-right flex flex-col gap-4 mt-[-12px]">
+            <Box className="sm:w-1/3 max-w-[300px] items-end text-right flex flex-col gap-4 mt-[-12px]">
               <div className="flex">
                 <p
                   //   style={{ scrollSnapAlign: "center" }}
