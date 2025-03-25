@@ -10,6 +10,7 @@ import { Projects } from "../components/Projects";
 import { Contact } from "../components/Contact";
 import { CustomCarousel } from "../components/CustomCarousel";
 import { Helmet } from "react-helmet";
+import { About } from "./About";
 
 export const LandingPage = () => {
   useEffect(() => {
@@ -57,47 +58,7 @@ export const LandingPage = () => {
           `}
         </script>
       </Helmet>
-      {/* Introduction */}
-      <div className="bg-[#1B2845]">
-        <NavigationBar />
-        <Box className={`${styling} flex`}>
-          <Introduction />
-        </Box>
-      </div>
-      {/* Carousel */}
-      <div className="bg-[#E9F4FF] ">
-        <Box className={`${styling}`}>
-          <CustomCarousel />
-        </Box>
-      </div>
-      {/* About */}
-      <div className="">
-        <Box className={`${styling} py-[56px]`}>
-          <AboutMe />
-        </Box>
-      </div>
-      {/* Tech Stack & Tools */}
-      <div>
-        <Box className={`${styling} py-[56px]`}>
-          <TechStack />
-        </Box>
-      </div>
-      {/* Projects */}
-      <div>
-        <Box className={`${styling} py-[56px]`}>
-          <Projects />
-        </Box>
-      </div>
-      {/* Contact */}
-      <div className="bg-[#E9F4FF]">
-        <Box className={`${styling} py-[56px]`}>
-          <Contact />
-        </Box>
-      </div>
-      {/* Footer */}
-      <div className="bg-[#0E445B]">
-        <Box sx={{ height: "30px" }}></Box>
-      </div>
+      <About/>
     </>
   );
 };
